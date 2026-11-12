@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BLOCKOUT for Mac</title>
+<meta name="description" content="A fast, keyboard-driven canvas for cloud and solution architecture. Native Mac app that works with Claude Code.">
+<meta name="theme-color" content="#141619">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="blockout-180.png">
+<style>
+  :root{--graphite:#141619;--surface:#202328;--border:#42474F;--white:#F3F1E9;--slate:#8C949E;--lime:#D5FA35;--lime-hover:#E0FF63;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--graphite);color:var(--white);font:16px/1.55 Arial,Helvetica,sans-serif;
+    background-image:radial-gradient(circle at 2px 2px,rgba(140,148,158,.28) 1px,transparent 1.2px);background-size:32px 32px}
+  a{color:var(--white)} a:focus-visible,button:focus-visible{outline:2px solid var(--lime);outline-offset:3px;border-radius:4px}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{display:flex;align-items:center;gap:12px;padding:28px 0}
+  header img{width:26px;height:28px;display:block}
+  header b{font-weight:900;font-size:20px;letter-spacing:-.02em}
+  .hero{padding:48px 0 40px}
+  h1{font-weight:900;font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.03em;margin:0 0 20px;max-width:14ch;text-wrap:balance}
+  .lead{font-size:clamp(17px,2.2vw,20px);color:var(--white);max-width:56ch;margin:0 0 32px}
+  .cta{display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:8px;background:var(--lime);color:var(--graphite);
+    font-weight:700;font-size:17px;text-decoration:none;transition:background 120ms}
+  .btn:hover{background:var(--lime-hover)}
+  .meta{font:13px/1.5 var(--mono);color:var(--slate)}
+  .shot{margin:16px 0 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
+  .shot img{display:block;width:100%;height:auto}
+  section{padding:56px 0;border-top:1px solid var(--border);margin-top:56px}
+  h2{font-weight:900;font-size:clamp(26px,3.6vw,36px);letter-spacing:-.02em;line-height:1.1;margin:0 0 24px}
+  .label{font:12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:0 0 12px}
+  .verbs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:0;padding:0;list-style:none}
+  .verbs li{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px}
+  .verbs h3{margin:0 0 6px;font-size:20px;font-weight:900;letter-spacing:-.01em}
+  .verbs p{margin:0;color:var(--slate);font-size:15px}
+  .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px 48px;align-items:start}
+  .two p{margin:0 0 12px;max-width:52ch}
+  pre{margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;overflow-x:auto;font:13.5px/1.7 var(--mono);color:var(--white)}
+  pre .c{color:var(--slate)}
+  ol{margin:0;padding-left:22px;max-width:60ch} ol li{margin:0 0 10px}
+  kbd{font:600 12px var(--mono);background:var(--surface);border:1px solid var(--border);border-bottom-width:2px;border-radius:5px;padding:1px 6px}
+  footer{border-top:1px solid var(--border);margin-top:56px;padding:28px 0 56px;color:var(--slate);font-size:13px}
+  footer p{margin:0 0 8px;max-width:80ch}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="blockout-symbol-lime.svg" alt=""><b>BLOCKOUT</b></header>
+
+  <main>
+    <div class="hero">
+      <h1>Give your architecture shape.</h1>
+      <p class="lead">A fast, keyboard-driven canvas for cloud and solution architecture. Type a service, press Tab for the next one, and the connectors route themselves. Nothing to align, nothing to style.</p>
+      <div class="cta">
+        <a class="btn" href="https://github.com/filipromeling-max/Blockout-public/releases/latest/download/BLOCKOUT.dmg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+          Download for Mac
+        </a>
+        <span class="meta">Version 1.1 · macOS 14 or later<br>Apple silicon and Intel · 1.3 MB</span>
+      </div>
+    </div>
+
+    <figure class="shot"><img src="screenshot.png" width="1800" height="1027" alt="BLOCKOUT showing an order platform: customers, Front Door, an application gateway, API Management, AKS, Service Bus, a function app and databases, grouped in an Azure section with nested network boundaries."></figure>
+
+    <section aria-labelledby="how">
+      <p class="label">From thought to structure</p>
+      <h2 id="how">Four verbs</h2>
+      <ul class="verbs">
+        <li><h3>Type</h3><p>Click anywhere and type a few letters: <kbd>aks</kbd>, <kbd>sql</kbd>, <kbd>gateway</kbd>. Over a hundred cloud and AI components, or any text as a plain box.</p></li>
+        <li><h3>Connect</h3><p><kbd>Tab</kbd> adds the next service, already connected. Each connector gets its own lane, so lines never run on top of each other.</p></li>
+        <li><h3>Group</h3><p>Wrap services in boundaries for networks and subscriptions, or in titled sections. Add sticky notes for open questions.</p></li>
+        <li><h3>Export</h3><p>Copy the drawing as an image, or export PNG and PDF, light on white for documents and slides.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="claude">
+      <p class="label">Works with Claude Code</p>
+      <h2 id="claude">Describe it, and watch it appear</h2>
+      <div class="two">
+        <div>
+          <p>Every drawing is a plain JSON file in a <code>BLOCKOUT</code> folder in your home folder. The app reloads a drawing the moment its file changes, so Claude Code can draw while you watch, and <kbd>⌘Z</kbd> undoes what it did.</p>
+          <p>Press <kbd>⌘K</kbd> in the app to ask for a change to the open drawing. Or install the command line tool and the Claude Code skill from the app's Claude menu, and ask Claude Code in any project to draw that system in BLOCKOUT.</p>
+          <p>Both need <a href="https://claude.com/claude-code">Claude Code</a> installed. The app works fully without it.</p>
+        </div>
+        <pre><span class="c"># from any terminal</span>
+blockout list
+blockout new "Order platform" --from draft.json
+blockout validate "Order platform"
+blockout export "Order platform" -o order.png
+blockout open "Order platform"</pre>
+      </div>
+    </section>
+
+    <section aria-labelledby="install">
+      <p class="label">First launch</p>
+      <h2 id="install">Install</h2>
+      <ol>
+        <li>Open the downloaded <code>BLOCKOUT.dmg</code> and drag BLOCKOUT onto Applications.</li>
+        <li>Open BLOCKOUT. macOS will say it cannot check the app, because this build is not signed with an Apple developer certificate.</li>
+        <li>Open <b>System Settings &gt; Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b> next to BLOCKOUT. You only do this once.</li>
+        <li>Optional: choose <b>Claude &gt; Install Command Line Tool and Claude Skill</b> in the menu bar.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>BLOCKOUT is an independent tool and is not affiliated with or endorsed by Microsoft. Azure, Microsoft Entra and Microsoft Fabric icons are the property of Microsoft and are included for use in architecture diagrams under Microsoft's icon terms.</p>
+    <p>All releases: <a href="https://github.com/filipromeling-max/Blockout-public/releases">github.com/filipromeling-max/Blockout-public/releases</a></p>
+  </footer>
+</div>
+</body>
+</html>
