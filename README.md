@@ -12,6 +12,6 @@ This build is not signed with an Apple developer certificate. After dragging BLO
 
 ## Notes
 
-BLOCKOUT is an independent tool and is not affiliated with or endorsed by Microsoft. Azure, Microsoft Entra and Microsoft Fabric icons are the property of Microsoft and are included for use in architecture diagrams under Microsoft's icon terms.
+BLOCKOUT is an independent tool and is not affiliated with or endorsed by Microsoft. The Azure architecture icon set, Microsoft Entra and Microsoft Fabric icons are the property of Microsoft and are included for use in architecture diagrams under Microsoft's icon terms.
 
 This repository holds the landing page and the releases only.
