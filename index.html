@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BLOCKOUT for Mac</title>
-<meta name="description" content="A fast, keyboard-driven canvas for cloud and solution architecture. Native Mac app that works with Claude Code.">
+<title>BLOCKOUT for Mac and Windows</title>
+<meta name="description" content="A fast, keyboard-driven canvas for cloud and solution architecture. For Mac and Windows, and works with Claude Code.">
 <meta name="theme-color" content="#141619">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="blockout-180.png">
@@ -27,6 +27,8 @@
   .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:8px;background:var(--lime);color:var(--graphite);
     font-weight:700;font-size:17px;text-decoration:none;transition:background 120ms}
   .btn:hover{background:var(--lime-hover)}
+  .btn.ghost{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1.5px var(--white)}
+  .btn.ghost:hover{background:var(--surface)}
   .meta{font:13px/1.5 var(--mono);color:var(--slate)}
   .shot{margin:16px 0 0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--surface)}
   .shot img{display:block;width:100%;height:auto}
@@ -62,6 +64,11 @@
           Download for Mac
         </a>
         <span class="meta">Version 1.7 · macOS 14 or later<br>Apple silicon and Intel · 3 MB</span>
+        <a class="btn ghost" href="https://github.com/filipromeling-max/Blockout-public/releases/latest/download/BLOCKOUT-Setup.exe">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></svg>
+          Download for Windows
+        </a>
+        <span class="meta">Version 1.7 · Windows 10 and 11<br>64-bit · 3 MB</span>
       </div>
     </div>
 
@@ -83,8 +90,8 @@
       <h2 id="claude">Describe it, and watch it appear</h2>
       <div class="two">
         <div>
-          <p>Every drawing is a plain JSON file in a <code>BLOCKOUT</code> folder in your home folder. The app reloads a drawing the moment its file changes, so Claude Code can draw while you watch, and <kbd>⌘Z</kbd> undoes what it did.</p>
-          <p>Press <kbd>⌘K</kbd> in the app to ask for a change to the open drawing. Or install the command line tool and the Claude Code skill from the app's Claude menu, and ask Claude Code in any project to draw that system in BLOCKOUT.</p>
+          <p>Every drawing is a plain JSON file in a <code>BLOCKOUT</code> folder in your home folder. The app reloads a drawing the moment its file changes, so Claude Code can draw while you watch, and <kbd>⌘Z</kbd> (<kbd>Ctrl Z</kbd> on Windows) undoes what it did.</p>
+          <p>Press <kbd>⌘K</kbd> (<kbd>Ctrl K</kbd>) in the app to ask for a change to the open drawing. Or install the command line tool and the Claude Code skill from the app (the Claude menu on a Mac, Help on Windows), and ask Claude Code in any project to draw that system in BLOCKOUT.</p>
           <p>Both need <a href="https://claude.com/claude-code">Claude Code</a> installed. The app works fully without it.</p>
         </div>
         <pre><span class="c"># from any terminal</span>
@@ -99,11 +106,19 @@ blockout open "Order platform"</pre>
     <section aria-labelledby="install">
       <p class="label">First launch</p>
       <h2 id="install">Install</h2>
+      <p class="label" style="margin-top:8px">Mac</p>
       <ol>
         <li>Open the downloaded <code>BLOCKOUT.dmg</code> and drag BLOCKOUT onto Applications.</li>
         <li>Open BLOCKOUT. macOS will say it cannot check the app, because this build is not signed with an Apple developer certificate.</li>
         <li>Open <b>System Settings &gt; Privacy &amp; Security</b>, scroll down, and click <b>Open Anyway</b> next to BLOCKOUT. You only do this once.</li>
         <li>Optional: choose <b>Claude &gt; Install Command Line Tool and Claude Skill</b> in the menu bar.</li>
+      </ol>
+      <p class="label" style="margin-top:32px">Windows</p>
+      <ol>
+        <li>Run the downloaded <code>BLOCKOUT-Setup.exe</code>. It installs for your user only, no administrator rights needed.</li>
+        <li>Windows may say it protected your PC, because this build is not signed with a code-signing certificate. Click <b>More info</b>, then <b>Run anyway</b>. You only do this once.</li>
+        <li>Your drawings are files in the <code>BLOCKOUT</code> folder in your user folder. <kbd>Ctrl K</kbd> asks Claude Code to change the open drawing.</li>
+        <li>Optional: choose <b>Help &gt; Install command line tool and Claude skill</b> for the <code>blockout</code> command and the Claude Code skill.</li>
       </ol>
     </section>
   </main>

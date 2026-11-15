@@ -1,14 +1,16 @@
-# BLOCKOUT for Mac
+# BLOCKOUT for Mac and Windows
 
-A fast, keyboard-driven canvas for cloud and solution architecture. Native Mac app that works with Claude Code.
+A fast, keyboard-driven canvas for cloud and solution architecture. For Mac and Windows, and works with Claude Code.
 
-**[Download the latest version](https://github.com/filipromeling-max/Blockout-public/releases/latest/download/BLOCKOUT.dmg)** · [Landing page](https://filipromeling-max.github.io/Blockout-public/)
+**[Download for Mac](https://github.com/filipromeling-max/Blockout-public/releases/latest/download/BLOCKOUT.dmg)** · **[Download for Windows](https://github.com/filipromeling-max/Blockout-public/releases/latest/download/BLOCKOUT-Setup.exe)** · [Landing page](https://filipromeling-max.github.io/Blockout-public/)
 
-Requires macOS 14 or later. Runs on Apple silicon and Intel.
+Mac: macOS 14 or later, Apple silicon and Intel. Windows: Windows 10 and 11, 64-bit.
 
 ## First launch
 
-This build is not signed with an Apple developer certificate. After dragging BLOCKOUT to Applications and opening it once, go to **System Settings > Privacy & Security** and click **Open Anyway** next to BLOCKOUT.
+**Windows:** the installer is not signed. If SmartScreen says it protected your PC, click **More info**, then **Run anyway**.
+
+**Mac:** this build is not signed with an Apple developer certificate. After dragging BLOCKOUT to Applications and opening it once, go to **System Settings > Privacy & Security** and click **Open Anyway** next to BLOCKOUT.
 
 ## Notes
 
